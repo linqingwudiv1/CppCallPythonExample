@@ -2,8 +2,6 @@
 #
 #
 #
-#
-#
 import sys, platform
 import ctypes, ctypes.util
 from ctypes import cdll
@@ -23,7 +21,7 @@ if lib != None:
     lib.HiPython.restype = ctypes.c_char_p
     teststr = bytes("i am 拆腻子","utf8")
     ret_str = lib.HiPython(teststr).decode("utf8")
-    ret_int = lib.HiPythonInt(3);
+    ret_int = lib.HiPythonInt(3)
     print("HiPythonInt return : ", ret_int, "|    HiPython Return:" , ret_str)
 else:
     print("input any key and enter exit:")
